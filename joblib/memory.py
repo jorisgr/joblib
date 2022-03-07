@@ -771,7 +771,7 @@ class MemorizedFunc(Logger):
             print(max(0, (80 - len(msg))) * '_' + msg)
         return output, metadata
 
-    def _persist_input(self, duration, args, kwargs, this_duration_limit=0.5):
+    def _persist_input(self, duration, args, kwargs, this_duration_limit=30.0):
         """ Save a small summary of the call using json format in the
             output directory.
 
